@@ -1,0 +1,17 @@
+header{
+  padding: 2em 0;
+}
+h5{
+  color: #999;
+  font-weight: 400;
+}
+main{
+  padding: 4em 0;
+}
+.center{
+  margin: 0 auto;
+  display: block;
+}
+.navbar-nav {
+  margin: 0 auto;
+}
