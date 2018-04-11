@@ -1,5 +1,6 @@
 require 'sinatra'
 require "sinatra/reloader" if development?
+require "./helpers"
 
 
 #routes
@@ -8,11 +9,11 @@ get '/' do
   erb:home
 end
 
-get '/celcius' do
-  @titulo = "Conversión de Celcius"
-  @Pregunta = "¿Cuatos grados Celcius?"
-  @grado = "Celcius"
-  erb:celcius
+get '/celsius' do
+  @titulo = "Conversión de celsius"
+  @Pregunta = "¿Cuatos grados celsius?"
+  @grado = "celsius"
+  erb:celsius
 end
 
 get '/fahrenheit' do
@@ -29,6 +30,15 @@ get '/kelvin' do
   erb:kelvin
 end
 
-get '/resultado' do
-  erb:resultado
+
+get '/resultados' do
+  @titulo = "Conversión de Kelvin"
+  @Pregunta = "¿Cuatos grados Kelvin?"
+  @grado = "Kelvin"
+  erb:kelvin
+end
+
+post '/celsius' do
+  @celsius = params[:celsius]
+  erb :celsius
 end
